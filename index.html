@@ -177,6 +177,10 @@
 
             // Agregar copo a la nieve
             nieve.appendChild(copoNieve);
+
+            setTimeout(() => {
+                copoNieve.remove()
+            }, duracion*1000);
         }
 
         setInterval(crearCopo, 200);
