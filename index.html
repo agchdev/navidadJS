@@ -15,6 +15,10 @@
             background: rgb(2,0,36);
             background: radial-gradient(rgba(2,0,36,1) 0%, rgba(255,0,0,1) 0%, rgba(70,0,0,1) 100%);
             display: flex;
+            overflow-x: hidden;
+        }
+        #banner{
+            
         }
         div.galeria{
             margin: auto;
@@ -26,7 +30,7 @@
 
             .cuadro{
                 width: 400px;
-                height: 400px;
+                height: 500px;
                 border: solid 10px #285c27;
                 box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
                 margin-top: 20px 0;
@@ -41,6 +45,9 @@
                     height: 100px;
                     top: -50px;
                     left: -50px;
+                }
+                img.fotoPostal{
+                    max-width: 100%;
                 }
                 
             }
@@ -60,7 +67,7 @@
         .copoNieve{
             width: 40px;
             height: 40px;
-            position: absolute;
+            position: fixed;
             background-color: white;
             border-radius: 50%;
             opacity: .8;
@@ -84,79 +91,83 @@
     </style>
 </head>
 <body>
+    <section id="banner">
+
+    </section>
     <!-- <div class="copoNieve"></div> -->
     <div class="nieve">
         <div class="galeria">
             <div class="cuadro">
                 <img class="lazo" src="img/lazo.png" alt="">
-                <img src="https://picsum.photos/400/500" alt="">
+                <img class="fotoPostal" src="https://picsum.photos/400/500" alt="">
             </div>
             <div class="cuadro">
                 <img class="lazo" src="img/lazo.png" alt="">
-                <img src="https://picsum.photos/400/500" alt="">
+                <img class="fotoPostal" src="https://picsum.photos/400/500" alt="">
             </div>
             <div class="cuadro">
                 <img class="lazo" src="img/lazo.png" alt="">
-                <img src="https://picsum.photos/400/500" alt="">
+                <img class="fotoPostal" src="https://picsum.photos/400/500" alt="">
             </div>
             <div class="cuadro">
                 <img class="lazo" src="img/lazo.png" alt="">
-                <img src="https://picsum.photos/400/500" alt="">
+                <img class="fotoPostal" src="https://picsum.photos/400/500" alt="">
             </div>
             <div class="cuadro">
                 <img class="lazo" src="img/lazo.png" alt="">
-                <img src="https://picsum.photos/400/500" alt="">
+                <img class="fotoPostal" src="https://picsum.photos/400/500" alt="">
             </div>
             <div class="cuadro">
                 <img class="lazo" src="img/lazo.png" alt="">
-                <img src="https://picsum.photos/400/500" alt="">
+                <img class="fotoPostal" src="https://picsum.photos/400/500" alt="">
             </div>
             <div class="cuadro">
                 <img class="lazo" src="img/lazo.png" alt="">
-                <img src="https://picsum.photos/400/500" alt="">
+                <img class="fotoPostal" src="https://picsum.photos/400/500" alt="">
             </div>
             <div class="cuadro">
                 <img class="lazo" src="img/lazo.png" alt="">
-                <img src="https://picsum.photos/400/500" alt="">
+                <img class="fotoPostal" src="https://picsum.photos/400/500" alt="">
             </div>
             <div class="cuadro">
                 <img class="lazo" src="img/lazo.png" alt="">
-                <img src="https://picsum.photos/400/500" alt="">
+                <img class="fotoPostal" src="https://picsum.photos/400/500" alt="">
             </div>
             <div class="cuadro">
                 <img class="lazo" src="img/lazo.png" alt="">
-                <img src="https://picsum.photos/400/500" alt="">
+                <img class="fotoPostal" src="https://picsum.photos/400/500" alt="">
             </div>
             <div class="cuadro">
                 <img class="lazo" src="img/lazo.png" alt="">
-                <img src="https://picsum.photos/400/500" alt="">
+                <img class="fotoPostal" src="https://picsum.photos/400/500" alt="">
             </div>
             <div class="cuadro">
                 <img class="lazo" src="img/lazo.png" alt="">
-                <img src="https://picsum.photos/400/500" alt="">
+                <img class="fotoPostal" src="https://picsum.photos/400/500" alt="">
             </div>
             <div class="cuadro">
                 <img class="lazo" src="img/lazo.png" alt="">
-                <img src="https://picsum.photos/400/500" alt="">
-            </div>
-            <div class="cuadro">
-                <img class="lazo" src="img/lazo.png" alt="">
-                <img src="https://picsum.photos/400/500" alt="">
-            </div>
-            <div class="cuadro">
-                <img class="lazo" src="img/lazo.png" alt="">
-                <img src="https://picsum.photos/400/500" alt="">
-            </div>
-            <div class="cuadro">
-                <img class="lazo" src="img/lazo.png" alt="">
-                <img src="https://picsum.photos/400/500" alt="">
+                <img class="fotoPostal" src="https://picsum.photos/400/500" alt="">
             </div>
         </div>
     </div>
 
     <script>
         const nieve = document.querySelector(".nieve");
+        const postal = document.querySelectorAll(".fotoPostal");
+        console.log(postal)
+        let cont = 18;
         console.log(nieve);
+
+        function añadirImg(){
+            postal.forEach(foto => {
+                if (cont == 22) cont++;
+                if (cont<=34) {
+                    foto.src = `img/IMG_19${cont}.JPEG`;
+                    cont++;
+                }
+            });
+        }
 
         // Funcion para crear copos
         function crearCopo(){
@@ -182,7 +193,7 @@
                 copoNieve.remove()
             }, duracion*1000);
         }
-
+        añadirImg();
         setInterval(crearCopo, 200);
     </script>
 </body>
