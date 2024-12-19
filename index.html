@@ -12,11 +12,13 @@
             min-height: 100vh;
             background: rgb(2,0,36);
             background: radial-gradient(rgba(2,0,36,1) 0%, rgba(255,0,0,1) 0%, rgba(70,0,0,1) 100%);
+            display: flex;
         }
         div.galeria{
             margin: auto;
             max-width: 80%;
             display: flex;
+            justify-content: center;
             flex-flow: wrap;
             gap: 20px;
 
@@ -24,11 +26,17 @@
                 width: 400px;
                 height: 500px;
                 border: solid 10px #285c27;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
                 img{
                     height: 100%;
                     width: 100%;
                 }
+                
             }
+        }
+
+        .galeria div:nth-child(16){
+            border-color: white;
         }
     </style>
 </head>
