@@ -154,6 +154,7 @@
 
     <script>
         const nieve = document.querySelector(".nieve");
+        console.log(nieve);
 
         // Funcion para crear copos
         function crearCopo(){
@@ -173,7 +174,10 @@
             copoNieve.style.left = `${Math.random()*100}vw`;
 
             // Agregar copo a la nieve
+            nieve.appendChild(copoNieve);
         }
+
+        // setInterval(crearCopo, 200);
     </script>
 </body>
 </html>
