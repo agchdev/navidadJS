@@ -49,11 +49,25 @@
         }
 
         .copoNieve{
+            width: 40px;
+            height: 40px;
             position: absolute;
             background-color: white;
             border-radius: 50%;
             opacity: .8;
-            animation: animar;
+            animation: animar 2s linear infinite;
+        }
+
+        @keyframes animar {
+            0%{
+                transform: translateY(0) rotate(0);
+                opacity: 1;
+            }
+
+            100%{
+                transform: translateY(100vh) rotate(360deg);
+                opacity: .2;
+            }
         }
         
     </style>
@@ -126,5 +140,9 @@
             <img src="https://picsum.photos/400/500" alt="">
         </div>
     </div>
+
+    <script>
+        
+    </script>
 </body>
 </html>
