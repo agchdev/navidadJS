@@ -16,9 +16,14 @@
             background: radial-gradient(rgba(2,0,36,1) 0%, rgba(255,0,0,1) 0%, rgba(70,0,0,1) 100%);
             display: flex;
             overflow-x: hidden;
+            flex-direction: column;
         }
         #banner{
-            
+            height: 40vh;
+            background-image: url("./img/IMG_1934.JPEG");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
         }
         div.galeria{
             margin: auto;
@@ -58,10 +63,10 @@
         }
 
         .nieve{
-            position: absolute;
-            top: 0;
-            left: 0;
+            margin-top: 10rem;
             width: 100%;
+            display: flex;
+            flex-direction: column;
         }
 
         .copoNieve{
@@ -92,10 +97,11 @@
 </head>
 <body>
     <section id="banner">
-
+        <h1>POSTAL NAVIDEÑA</h1>
     </section>
     <!-- <div class="copoNieve"></div> -->
     <div class="nieve">
+        <h2>LOS AMIGOS!</h2>
         <div class="galeria">
             <div class="cuadro">
                 <img class="lazo" src="img/lazo.png" alt="">
