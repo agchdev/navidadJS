@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -151,10 +151,26 @@
     </div>
 
     <script>
+        const nieve = document.querySelector(".nieve");
+
+        // Funcion para crear copos
         function crearCopo(){
             const copoNieve = document.createElement("div");
             copoNieve.classList.add("copoNieve"); 
-            
+
+            // Tamaño aleatorio copos entre 5px y 15px
+            const tam = Math.random() * 10 + 5;
+            copoNieve.style.width = `${tam}px`;
+            copoNieve.style.height = `${tam}px`;
+
+            // Duracion aleatoria entre 2s y 5s
+            const duracion = Math.random() * 3 + 2;
+            copoNieve.style.animationDuration = `${duracion}s`;
+
+            // Posicion inicial aleatoria
+            copoNieve.style.left = `${Math.random()*100}vw`;
+
+            // Agregar copo a la nieve
         }
     </script>
 </body>
